@@ -12,6 +12,8 @@ namespace Lab_2_variant_7
         {
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
+
+
             Console.Write("Введіть n: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введіть k: ");
