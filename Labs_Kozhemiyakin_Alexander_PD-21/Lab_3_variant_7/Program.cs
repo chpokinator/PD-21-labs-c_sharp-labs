@@ -8,25 +8,43 @@ namespace Lab_3_variant_7
 {
     class Program
     {
+        //Варіант 7
+        //7.	Даний масив цілих чисел розміру N. Замінити всі додатні (від’ємні) елементи на значення мінімального (максимального) елементу. 
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
-            Console.Write("Введіть число 1: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введіть число 2: ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введіть число 3: ");
-            int c = Convert.ToInt32(Console.ReadLine());
 
-            if(a == b || a==c || b == c)
+
+
+            Console.Write("Введіть розмір масиву: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Random random = new Random();
+            int[] arr = new int[n];
+            Console.Write("Початковий масив: ");
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine("Серед чисел є пара співпадаючих");
+                arr[i] = random.Next(-100, 100);
+                Console.Write(arr[i] + " ");
             }
-            else
+            Console.WriteLine("\n");
+            int min = arr.Min();
+            int max = arr.Max();
+            Console.Write("Вихідний масив: ");
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine("Серед чисел намає співпадаючих пар");
+                if (arr[i] > 0)
+                {
+                    arr[i] = min;
+                }
+                else if (arr[i] < 0)
+                {
+                    arr[i] = max;
+                }
+                Console.Write(arr[i] + " ");
             }
+            Console.WriteLine();
+            Console.ReadKey();
         }
     }
 }
