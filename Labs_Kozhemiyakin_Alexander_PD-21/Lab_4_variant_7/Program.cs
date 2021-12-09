@@ -20,7 +20,7 @@ namespace Lab_4_variant_7
             smartphone.Games();
             smartphone.Messages();
             smartphone.Perfomance();
-
+            smartphone.CallTo("aboba");
             Console.ReadKey();
         }
     }

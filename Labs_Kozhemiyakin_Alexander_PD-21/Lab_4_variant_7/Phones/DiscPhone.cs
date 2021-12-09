@@ -12,5 +12,10 @@ namespace Lab_4_variant_7.Phones
         {
             Console.WriteLine("I can make calls on phone numbers!!!");
         }
+
+        public virtual void CallTo(string number)
+        {
+            Console.WriteLine($"Calling to {number}");
+        }
     }
 }
